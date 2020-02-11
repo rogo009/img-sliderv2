@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* this styling stacks the slides on top of each other */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 70px;
+    left: 0px;
+    width: 600px;
+    background-color: rgba(255,255,255, 0.8);
+    color: #333;
+    padding: 35px;
+}
+
+/* Background Images */
+.slide:first-child {
+    background: url('./imgs/bali.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+    background: url('./imgs/italy.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(3){
+    background: url('./imgs/japan.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(4) {
+    background: url('./imgs/paris.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(5){
+    background: url('./imgs/thai.jpg') no-repeat center top/cover;
+}
+
+/* README
+first time using 100vh and 100vw (view port height and view port width) lines 17-18, this means that no matter the browser size it will always take up the entire height + width of the browser. 
+
+first time adding images as backgrounds into CSS file. using child element property*/
