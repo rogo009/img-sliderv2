@@ -32,7 +32,7 @@ const prevSlide = () => {
         current.previousElementSibling.classList.add('current');
     } else {
         // add current to last
-        slides[slides.length - 1].classList.add('current'); //since you don't know the index number input slides.length -1
+        slides[slides.length - 1].classList.add('current'); // since you don't know the index number input slides.length -1
     }
     setTimeout(() => current.classList.remove('current'));
 }
@@ -62,12 +62,14 @@ if(auto) {
     slideInterval = setInterval(nextSlide, intervalTime);
 }
 
-//ReadME
+// ReadME
 // target the slides
 // target the buttons
-// create a variables for auto scroll and time
-// create function that adds or removes a class name called current to make images appear or disappear
-// resetting the interval prevented the slide (if clicked) from being shown less than 5 seconds, if the user happened to click the next button. every slide will always have 5 second interval applied each time the next or prev button is clicked
+// create a variables for auto scroll and interval time
+// essentially this entire project is to create function(s) that add or remove a class name called 'current' to make images appear or disappear if button is clicked and / or when auto scroll is activated "true"
+// you have to apply a class that tracks the slides
+// resetting the interval prevented the slide /img (if the user clicked before 5 seconds passed) from being shown less than 5 seconds. each click ensures each slide will always have a 5 second interval re-applied upon each button click
+// this project has images as background, so the imgs were implemented into the css file
 
 // const nextSlide = function() {
 
