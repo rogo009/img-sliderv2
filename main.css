@@ -52,19 +52,19 @@ body {
 
 .slide.current .content {
     opacity: 1;
-    transform: translatex(600px);
+    transform: translateX(600px);
     transition: all 0.7s ease-in-out 0.3s;
 }
 
 .buttons button#next {
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 15px;
 }
 
 .buttons button#prev {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 15px;
 }
 
@@ -83,20 +83,35 @@ body {
     color: #333;
 }
 
+@media(max-width: 500px) {
+    .slide .content {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+
+    .slide.current .content {
+        transform: translateY(-300px);
+    }
+}
+
 /* Background Images */
 .slide:first-child {
-    background: url('./imgs/bali.jpg') no-repeat center center/cover;
+    background: url('./imgs/bali.jpg') no-repeat center top/cover;
 }
 .slide:nth-child(2) {
+    background: url('./imgs/greece.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(3) {
     background: url('./imgs/italy.jpg') no-repeat center top/cover;
 }
-.slide:nth-child(3){
+.slide:nth-child(4) {
     background: url('./imgs/japan.jpg') no-repeat center top/cover;
 }
-.slide:nth-child(4) {
+.slide:nth-child(5) {
     background: url('./imgs/paris.jpg') no-repeat center top/cover;
 }
-.slide:nth-child(5){
+.slide:nth-child(6) {
     background: url('./imgs/thai.jpg') no-repeat center top/cover;
 }
 
